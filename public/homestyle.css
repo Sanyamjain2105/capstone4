@@ -1,0 +1,154 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important;
+}
+
+.hero-section {
+    background: url('./DALL·E\ 2024-12-26\ 22.39.00\ -\ A\ light\ and\ cartoonish\ illustration\ of\ a\ whimsical\ library\ setting\,\ featuring\ colorful\ book\ shelves\,\ playful\ decorations\,\ and\ a\ sunny\ ambiance.\ The\ de.webp') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.hero-section h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 3rem;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-body {
+    background: linear-gradient(90deg, #f3f4f6, #ffffff);
+    word-wrap: break-word;
+}
+
+.badge {
+    background: #6a11cb;
+    color: #fff;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    max-width: 100%; /* Ensures text stays within bounds */
+    white-space: nowrap; /* Prevents wrapping of text */
+    overflow: hidden; /* Ensures any overflow text is hidden */
+    text-overflow: ellipsis; /* Adds "..." for overflow text */
+}
+
+.btn-custom {
+    background-color: #2575fc;
+    color: #fff;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #6a11cb;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+/* General Styles for Night Mode */
+.night-light {
+    background: #1a1a1a !important; /* Softer dark background */
+    color: #f4f4f4 !important; /* Light text for readability */
+}
+
+/* Navbar in Night Mode */
+.night-light .navbar {
+    background: linear-gradient(90deg, #d8a03d, #f1c27d); /* Soft amber/yellow gradient */
+}
+
+/* Card Body in Night Mode */
+.night-light .card-body {
+    background: #2c2c2c; /* Darker background for cards */
+    color: #f4f4f4; /* Light text color */
+}
+
+/* Hero Section in Night Mode */
+.night-light .hero-section {
+    background: url('./DALL·E\ 2024-12-26\ 22.39.00\ -\ A\ light\ and\ cartoonish\ illustration\ of\ a\ whimsical\ library\ setting\,\ featuring\ colorful\ book\ shelves\,\ playful\ decorations\,\ and\ a\ sunny\ ambiance.\ The\ de.webp') no-repeat center center/cover;
+    background-color: #b45f06; /* Warm, golden background */
+    color: #f4f4f4; /* Soft light text */
+}
+
+/* Hero Section Title in Night Mode */
+.night-light .hero-section h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 3rem;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Soft shadow to match the warm theme */
+}
+
+/* Footer in Night Mode */
+.night-light footer {
+    background: #333; /* Dark footer */
+}
+
+/* Card Hover Effects in Night Mode */
+.night-light .card:hover {
+    transform: translateY(-5px); /* Softer hover effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Softer shadow for cards */
+}
+
+/* Button Styles for Night Mode */
+.night-light .btn-custom {
+    background-color: #f1c27d; /* Soft amber-yellow button */
+    color: #333;
+}
+
+.night-light .btn-custom:hover {
+    background-color: #d8a03d; /* Darker amber hover */
+}
+
+/* Adjust Badge Styles in Night Mode */
+.night-light .badge {
+    background: #f1c27d; /* Soft amber-yellow badge */
+    color: #333;
+}
+
+/* Adjust Text in Night Mode */
+.night-light p, .night-light .card-title {
+    color: #f4f4f4; /* Softer light text color */
+}
+
+/* Links in Night Mode */
+.night-light a {
+    color: #f1c27d; /* Soft amber-yellow links */
+}
+
+.night-light a:hover {
+    color: #d8a03d; /* Darker amber link hover */
+}

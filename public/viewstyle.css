@@ -1,0 +1,104 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Card Hover Effect */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Rating Stars */
+.rating i {
+    margin-right: 2px;
+    font-size: 1.2rem;
+}
+
+/* Hero Section */
+header {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+}
+
+header h1 {
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+/* General Styles */
+body {
+    font-family: 'Merriweather', serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hero-section {
+    background: url('./DALL·E\ 2024-12-26\ 22.39.00\ -\ A\ light\ and\ cartoonish\ illustration\ of\ a\ whimsical\ library\ setting\,\ featuring\ colorful\ book\ shelves\,\ playful\ decorations\,\ and\ a\ sunny\ ambiance.\ The\ de.webp') center/cover no-repeat;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Night Light Mode */
+body.night-light {
+    background-color: #f5e6cc;
+    color: #5a4637;
+}
+
+body.night-light .bg-light {
+    background-color: #f4dcb7;
+}
+
+body.night-light .btn-warning {
+    background-color: #ffcf79;
+    color: #5a4637;
+}
+
+body.night-light .btn-outline-primary {
+    border-color: #8b5e34;
+    color: #8b5e34;
+}
+
+body.night-light .btn-outline-secondary {
+    border-color: #5a4637;
+    color: #5a4637;
+}
+
+/* Footer */
+footer {
+    background: #2c2c2c;
+    color: #ccc;
+    font-size: 0.9rem;
+}
