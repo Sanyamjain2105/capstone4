@@ -59,20 +59,20 @@
                     <img src="<%= book.cover %>" class="card-img-top" alt="<%= book.title %> Cover">
                     <div class="card-body">
                         <h5 class="card-title text-primary"><%= book.book_title %></h5>
-                        <p class="card-text text-muted">by <strong><%= book.author %></strong></p>
+                        <p class="card-text text-muted"><strong>by <%= book.author %></strong></p>
                         <p class="text-muted">
                             <span class="badge text-truncate">Genre: <%= book.tags || 'Unknown' %></span>
                         </p>
                         <p class="text-muted">
-                            <strong>Publisher:</strong> <%= book.publishers || 'Unknown' %>
+                            <strong>Publisher: <%= book.publishers || 'Unknown' %></strong>
                         </p>
                         <p class="text-muted">
-                            <strong>Pages:</strong> <%= book.pages || 'Not Available' %>
+                            <strong>Pages: <%= book.pages || 'Not Available' %></strong>
                         </p>
-                        <a href="<%= book.link %>" target="_blank" class="btn btn-sm btn-custom">🌐 Visit Book Page</a>
+                        <a href="<%= book.linkurl %>" target="_blank" class="btn btn-sm btn-custom">🌐 Visit Book Page</a>
                         <div class="mt-3 d-flex justify-content-between">
                             <button class="btn btn-primary w-48" onclick="location.href='/notes/add/<%= book.id %>'">📄 Add Notes</button>
-                            <button class="btn btn-outline-dark w-48" onclick="location.href='/notes/view/<%= book.id %>'">🔍 View Notes</button>
+                            <button class="btn btn-outline-dark w-48 night-light" onclick="location.href='/notes/view/<%= book.id %>'">🔍 View Notes</button>
                         </div>
                     </div>
                 </div>

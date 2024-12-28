@@ -133,6 +133,17 @@ footer {
     background-color: #d8a03d; /* Darker amber hover */
 }
 
+.night-light .btn-outline-dark {
+    border-color: #f1c27d;
+    color: #f1c27d;
+}
+
+.night-light .btn-outline-dark:hover {
+    background-color: #d8a03d;
+    color: #333;
+    border-color: #d8a03d;
+}
+
 /* Adjust Badge Styles in Night Mode */
 .night-light .badge {
     background: #f1c27d; /* Soft amber-yellow badge */
@@ -140,8 +151,11 @@ footer {
 }
 
 /* Adjust Text in Night Mode */
-.night-light p, .night-light .card-title {
-    color: #f4f4f4; /* Softer light text color */
+.night-light p, 
+.night-light .card-title, 
+.night-light .card-text, 
+.night-light .text-muted {
+    color: #f1c27d;
 }
 
 /* Links in Night Mode */
@@ -151,4 +165,35 @@ footer {
 
 .night-light a:hover {
     color: #d8a03d; /* Darker amber link hover */
+}
+
+/* Night Mode for View and Add Notes Buttons */
+.night-light .btn-primary {
+    background-color: #f1c27d;
+    color: #333;
+    border: none;
+}
+
+.night-light .btn-primary:hover {
+    background-color: #d8a03d;
+    color: #333;
+}
+
+.night-light .btn-outline-dark {
+    border: 1px solid #f1c27d;
+    color: #f1c27d;
+}
+
+.night-light .btn-outline-dark:hover {
+    background-color: #d8a03d;
+    border-color: #d8a03d;
+    color: #333;
+}
+
+/* Pages, Author, and Publication Details */
+.night-light .text-muted strong{
+    color: #f1c27d;
+}
+.night-light .text-muted span {
+    color:black;
 }

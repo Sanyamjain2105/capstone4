@@ -25,37 +25,45 @@ app.get("/", async (req, res) => {
     const query = "SELECT * FROM notes ORDER BY id ASC";
     const result = await db.query(query);
     // console.log(result.rows);
+    let errors = [];
+    for (let i = 0; i < result.rows.length; i++) {
     for (let i = 0; i < result.rows.length; i++) {
         // console.log(result.rows[i].book_isbn);
-        var isbn = result.rows[i].book_isbn.trim();
+        let isbn = result.rows[i].book_isbn.trim();
 
         // Construct the URL
         const url = "https://openlibrary.org/api/books?bibkeys=ISBN:" + encodeURIComponent(isbn) + "&format=json&jscmd=data";
-        // console.log(url);
         try {
             const response = await axios.get(url);
           
             const data = response.data[`ISBN:${isbn}`];
             // console.log(data);
             if (data) {
-                var tags=data.subjects[0].name;
+                var tags = data.subjects && data.subjects.length > 0 ? data.subjects[0].name : "No subjects available";
                 for(var j=1;j<Math.min(4,data.subjects.length);j++){
                     tags+= ", "+data.subjects[j].name;
                 }
                 result.rows[i].tags = tags;
-                result.rows[i].cover = data.cover.large || "./images.png";
+                result.rows[i].cover = data.cover ? data.cover.large : "./images.png";
                 result.rows[i].pages = data.number_of_pages || "not available";
                 result.rows[i].publish_date = data.publish_date || "not available";
-                result.rows[i].publishers = data.publishers[0].name || "not available";
+                result.rows[i].publishers = (data.publishers && data.publishers.length > 0) ? data.publishers[0].name : "not available";
                 result.rows[i].linkurl = data.url || "not available";
             } else {
-                res.status(404).json({ error: "Book not found" });
+                errors.push({ isbn, error: "Book not found" });
             }
         } catch (error) {
-            console.error("Error fetching book data:", error);
-            res.status(500).json({ error: "Failed to fetch book data" });
+            // console.error("Error fetching book data:", error);
+            errors.push({ isbn, error: "Failed to fetch book data" });
+        }
         }
     }
+    if (errors.length > 0) {
+        return res.status(500).json({ errors });
+    }
+    res.render("home.ejs", {
+        books: result.rows
+    });
     // console.log(result.rows);
     res.render("home.ejs",{
         books: result.rows,
